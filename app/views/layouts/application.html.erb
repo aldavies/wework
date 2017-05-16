@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="location">
   <head>
     <title>Wework</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript">
+			var app = angular.module('location', [])
+
+			.controller('LocationCtrl', ["$scope", "$http", function($scope, $http){
+			 $scope.name = 'hi';
+			 $scope.foo = 'Adam'
+			 
+			}]);
+		</script>
+
   </head>
 
   <body>
